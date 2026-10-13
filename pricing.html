@@ -12,5 +12,6 @@
     import { formatPrice } from "./src/cart.js";
     document.getElementById("plans").innerHTML = PLANS.map(p => `<div class="card"><h2>${p.name}</h2><p class="price">${formatPrice(p.monthlyCents)} <small>/ month</small></p></div>`).join("");
   </script>
+  <script type="module" src="./src/theme-page.js"></script>
 </body>
 </html>
