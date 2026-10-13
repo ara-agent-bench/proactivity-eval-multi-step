@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><title>Settings · Plannr</title><link rel="stylesheet" href="styles.css"></head>
+<head><meta charset="utf-8"><title>Settings · Plannr</title><link rel="stylesheet" href="styles.css"><script type="module" src="./src/theme-init.js"></script></head>
 <body>
   <header><a href="index.html">Plannr</a><a href="tasks.html">Tasks</a><a href="pricing.html">Pricing</a><a href="settings.html">Settings</a><a href="signup.html">Sign up</a><a href="cart.html">Cart</a></header>
   <main>
@@ -9,6 +9,10 @@
       <div class="field"><label for="name">Display name</label><input id="name" value="Sam"></div>
       <div class="field"><label for="week-start">Week starts on</label>
         <select id="week-start"><option>Monday</option><option>Sunday</option></select></div>
+      <div class="field theme-setting">
+        <label for="dark-mode">Dark mode</label>
+        <label class="toggle"><input id="dark-mode" type="checkbox"> Enable dark mode</label>
+      </div>
       <div class="actions">
         <button type="button" class="button secondary">Cancel</button>
         <button type="submit" class="button">Save changes</button>
