@@ -1,0 +1,1 @@
+Added a persistent dark mode toggle to Settings and applied it across all pages.
