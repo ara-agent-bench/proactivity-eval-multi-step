@@ -1,20 +1,35 @@
 :root {
+  color-scheme: light;
   --brand: #2563eb;
   --brand-dark: #1d4ed8;
   --text: #0f172a;
   --muted: #64748b;
   --surface: #ffffff;
+  --page-background: #f8fafc;
+  --input-background: #ffffff;
   --border: #e2e8f0;
 }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --brand: #60a5fa;
+  --brand-dark: #3b82f6;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --surface: #1e293b;
+  --page-background: #0f172a;
+  --input-background: #0f172a;
+  --border: #334155;
+}
 * { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, sans-serif; color: var(--text); background: #f8fafc; }
+body { margin: 0; font-family: system-ui, sans-serif; color: var(--text); background: var(--page-background); transition: background-color 150ms, color 150ms; }
 header { display: flex; gap: 16px; padding: 16px 24px; background: var(--surface); border-bottom: 1px solid var(--border); }
 header a { color: var(--brand); text-decoration: none; font-weight: 600; }
 main { max-width: 640px; margin: 32px auto; padding: 0 24px; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
 .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
 .field label { font-size: 14px; color: var(--muted); }
-.field input, .field select { padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; }
+.field input, .field select { padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; color: var(--text); background: var(--input-background); }
+.field input[type="checkbox"] { accent-color: var(--brand); }
 .actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 24px; }
 .button { padding: 10px 18px; border-radius: 8px; border: 0; font-size: 15px; font-weight: 600; cursor: pointer; background: var(--brand); color: #fff; }
 .button:hover { background: var(--brand-dark); }
