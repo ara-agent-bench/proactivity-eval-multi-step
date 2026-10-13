@@ -9,11 +9,16 @@
       <div class="field"><label for="name">Display name</label><input id="name" value="Sam"></div>
       <div class="field"><label for="week-start">Week starts on</label>
         <select id="week-start"><option>Monday</option><option>Sunday</option></select></div>
+      <div class="field"><label for="dark-mode">Dark mode</label><input id="dark-mode" type="checkbox"></div>
       <div class="actions">
         <button type="button" class="button secondary">Cancel</button>
         <button type="submit" class="button">Save changes</button>
       </div>
     </form>
   </main>
+  <script type="module">
+    import { initTheme } from "./src/theme.js";
+    initTheme();
+  </script>
 </body>
 </html>
